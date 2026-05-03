@@ -232,10 +232,7 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     true
     )
 })
-scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.hazardLava1, function (sprite, location) {
-    game.gameOver(false)
-})
-scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.greenInnerNorthWest, function (sprite, location) {
+scene.onOverlapTile(SpriteKind.Player, assets.tile`transparency16`, function (sprite, location) {
     game.showLongText("LEVEL UP!UPGRADING...LOADING...REMEMBER TO THANK BRADY!", DialogLayout.Full)
     music.play(music.createSong(hex`0078000408020202001c000c960064006d019001000478002c010000640032000000000a060005280000000400021d2c0400080002242908000c00011e0c001000012710001400021d2a18001c00021b2004001c00100500640000041e000004000000000000000000000000000a04000419000400080001240c001000012410001400012514001800022429`), music.PlaybackMode.UntilDone)
     scene.setBackgroundImage(img`
